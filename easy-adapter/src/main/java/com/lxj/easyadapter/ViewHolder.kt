@@ -49,7 +49,7 @@ class ViewHolder(val convertView: View) : RecyclerView.ViewHolder(convertView) {
 
         fun createViewHolder(context: Context,
                              parent: ViewGroup, layoutId: Int): ViewHolder {
-            val itemView = LayoutInflater.from(context).inflate(layoutId, parent,
+            val itemView = LayoutInflater.from(context).cloneInContext(context).inflate(layoutId, parent,
                     false)
             return ViewHolder( itemView)
         }
